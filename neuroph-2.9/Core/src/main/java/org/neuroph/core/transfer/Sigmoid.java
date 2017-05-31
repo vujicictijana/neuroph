@@ -104,7 +104,7 @@ public class Sigmoid extends TransferFunction implements Serializable {
 	@Override
 	public double getDerivative(double net) { // remove net parameter? maybe we dont need it since we use cached output value
                 // +0.1 is fix for flat spot see http://www.heatonresearch.com/wiki/Flat_Spot
-		double derivative = this.slope * this.output * (1d - this.output) + 0.1;
+		double derivative = this.slope * this.output * (1d - this.output);// + 0.1;
 		return derivative;
 	}
 
